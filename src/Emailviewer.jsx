@@ -23,7 +23,7 @@ const Emailviewer = () => {
 
         // Send extracted URL to backend
         setLoading(true);
-        axios.post("http://localhost:3001/upload", { url: extractedUrl })
+        axios.post("https://temp-backend-six.vercel.app/upload", { url: extractedUrl })
             .then(response => {
                 setEmailData(response.data);
                 setLoading(false);
