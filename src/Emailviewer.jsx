@@ -55,7 +55,7 @@ const Emailviewer = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
+        <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6 text-black">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">📧 Email Viewer</h2>
 
             {loading && <p className="text-blue-500 text-lg">Loading...</p>}
@@ -63,10 +63,10 @@ const Emailviewer = () => {
 
             {emailData && (
                 <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-[90%]">
-                    <p className="text-gray-700"><strong>To:</strong> {emailData.to}</p>
-                    <p className="text-gray-700"><strong>From:</strong> {emailData.from}</p>
-                    <p className="text-gray-700"><strong>Subject:</strong> {emailData.subject}</p>
-                    <p className="text-gray-500 text-sm"><strong>Date:</strong> {emailData.date}</p>
+                    <p className="text-gray-700"><strong>To:</strong> {emailData.to || "N/A"}</p>
+                    <p className="text-gray-700"><strong>From:</strong> {emailData.from || "N/A"}</p>
+                    <p className="text-gray-700"><strong>Subject:</strong> {emailData.subject || "N/A"}</p>
+                    <p className="text-gray-500 text-sm"><strong>Date:</strong> {emailData.date || "N/A"}</p>
                     <p className="text-gray-500 text-sm"><strong>CC:</strong> {emailData.cc || "N/A"}</p>
                     <p className="text-gray-500 text-sm"><strong>BCC:</strong> {emailData.bcc || "N/A"}</p>
 
